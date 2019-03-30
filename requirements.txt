@@ -1,5 +1,4 @@
 pytest==3.10.1
-httplib2
 more-itertools
 parse
 pbr
