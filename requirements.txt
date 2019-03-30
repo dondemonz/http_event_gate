@@ -1,9 +1,6 @@
 pytest==3.10.1
-more-itertools
 parse
-pbr
 pluggy
-py
 requests
 six
 allure-pytest
