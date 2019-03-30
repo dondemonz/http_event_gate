@@ -1,7 +1,6 @@
 pytest==3.10.1
 httplib2
 more-itertools
-oauth2
 parse
 pbr
 Pillow
@@ -9,7 +8,6 @@ pluggy
 py
 pycparser
 requests
-selenium
 six
 syspath
 urllib3
