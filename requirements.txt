@@ -8,5 +8,4 @@ py
 pycparser
 requests
 six
-urllib3
 allure-pytest
