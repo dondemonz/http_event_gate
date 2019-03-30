@@ -27,7 +27,7 @@ def test_SendRequestPOSTWithXML():
     assert data == body
 
 
-def test_SendUserRequestGETandResponse(fix):
+def test_SendUserRequestGETandResponse():
     response = requests.get(url="http://" + slave_ip + ":88/testreq?param=pam")
     user_resp_code = "200"
     assert str(response.status_code) == user_resp_code
