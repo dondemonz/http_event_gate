@@ -6,9 +6,6 @@ parse
 pbr
 Pillow
 pluggy
-pprint
-psutil
-pytest-shutil
 py
 pycparser
 requests
