@@ -3,7 +3,6 @@ httplib2
 more-itertools
 parse
 pbr
-Pillow
 pluggy
 py
 pycparser
