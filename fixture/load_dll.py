@@ -41,12 +41,6 @@ class DllHelper:
     def connect(self):
         self.my_dll.ConnectEx.argtypes = [c_char_p, c_char_p, c_char_p, CallbackProto, c_uint32, c_int, c_uint32]
         self.my_dll.ConnectEx(p1, p2, p3, CallbackWrapper, p5, p6, p7)
-        """проверка isconected
-        if x == 0:
-            print("error")
-        else:
-            print("ok")
-        """
 
     def send_react(self, message):
         self.connect_to_dll()
@@ -57,7 +51,6 @@ class DllHelper:
 
     def send_event(self, message):
         self.connect_to_dll()
-        # message = "CORE||CREATE_OBJECT|objtype<CAM>,objid<99>,parent_id<2>,name<Test_Camera>".encode("utf-8")
         msg = c_char_p(message)
         self.my_dll.SendMsg.argtypes = [c_char_p, c_char_p]
         self.my_dll.SendMsg(p3, msg)
@@ -70,17 +63,3 @@ class DllHelper:
         self.callback_proto()
         self.callback_wrapper()
         self.connect()
-
-"""
-    def is_object_exist(self, obj_name, obj_id):
-        self.my_dll.
-"""
-
-
-
-# print(my_dll)
-# print(vars(my_dll))
-
-# message = (p10, p11, p12, p13, p14, p15, p16, p17, p18, p19, p20)
-# message = "CORE||CREATE_OBJECT|objtype<CAM>,objid<99>,parent_id<2>,name<Test_Camera>".encode("utf-8")
-# message = "CAM|40|REC".encode("utf-8")

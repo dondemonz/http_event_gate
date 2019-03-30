@@ -1,5 +1,5 @@
 import requests
-from model.json_check import *
+import json
 from model.input_data import *
 from parse import search
 
@@ -27,7 +27,7 @@ def test_SendRequestPOSTWithXML():
     assert data == body
 
 
-def test_SendUserRequestGETandResponse():
+def test_SendUserRequestGETandResponse(fix):
     response = requests.get(url="http://" + slave_ip + ":88/testreq?param=pam")
     user_resp_code = "200"
     assert str(response.status_code) == user_resp_code
