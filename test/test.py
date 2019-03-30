@@ -1,8 +1,6 @@
 import requests
-from check_event_gate_response import check_event_gate_response
-from json_check import *
-from input_data import *
-import time
+from model.json_check import *
+from model.input_data import *
 from parse import search
 
 # Перед началом теста необходимо подложить файл paths.txt в папку *SecurOS\Modules\http_event_proxy и добавить обработчик в скрипты из файла Additional_Function.js

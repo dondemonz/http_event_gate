@@ -1,5 +1,5 @@
 from ctypes import windll, WINFUNCTYPE, c_int, c_char_p, c_ulong, c_uint32
-from input_data import *
+from model.input_data import *
 
 p1 = c_char_p(localHostIp.encode("utf-8"))
 p2 = c_char_p(iidkPort.encode("utf-8"))
