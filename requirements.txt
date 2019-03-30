@@ -5,7 +5,6 @@ parse
 pbr
 pluggy
 py
-pycparser
 requests
 six
 allure-pytest
