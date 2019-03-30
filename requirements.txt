@@ -9,6 +9,5 @@ py
 pycparser
 requests
 six
-syspath
 urllib3
 allure-pytest
