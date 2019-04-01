@@ -26,7 +26,7 @@ class DllHelper:
 
     def callback(self, cb1, cb2, cb3):
         # сохранение параметра в общей переменной
-        print(cb1, cb2, cb3)
+        # print(cb1, cb2, cb3)
         self.cb1 = cb1
         return 0
 
