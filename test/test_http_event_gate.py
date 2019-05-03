@@ -59,6 +59,6 @@ def test_SendUserRequestPOSTandResponseWithJSON():
     data2 = json.loads(body)
     # соответсвие параметру в словаре
     data3 = data2["param"]
-    print("data3"+data3)
+    # print("data3"+data3)
     assert data3 == "value"
 
