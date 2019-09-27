@@ -5,7 +5,7 @@ from parse import search
 import time
 # from model.check_event_gate_response import check_event_gate_response
 
-# Перед началом теста необходимо подложить файл paths.txt в папку *SecurOS\Modules\http_event_proxy и добавить обработчик в скрипты из файла Additional_Function.js
+# Тест использует файл paths.txt в папке *SecurOS\Modules\http_event_proxy
 def test_SendRequestGET():
     response = requests.get(url="http://" + slave_ip + ":88/event?param=123")
     user_resp_code = "200"
