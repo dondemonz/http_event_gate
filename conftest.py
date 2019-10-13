@@ -17,6 +17,7 @@ def fix2(request):
     fix = DllHelper()
     fix.send_event(message=("CORE||CREATE_OBJECT|objtype<HTTP_EVENT_PROXY>,objid<"+objId+">,parent_id<"+slave+">,name<Test_HTTP_Event_Gate>,port<88>").encode("utf-8"))
     fix.send_event(message=("CORE||CREATE_OBJECT|objtype<VBJSCRIPT_GROUP>,objid<"+objId+">,parent_id<"+slave+">,name<Program VB/JScript"+objId+">").encode("utf-8"))
+    #у дженкинса проблемы с доступом к файлу, через пайчарм тест проходит.
     #f = open("C:\\Program Files (x86)\\ISS\\SecurOS\\Modules\\http_event_proxy\\paths.txt", "w+")
     #f.write(file_paths_data)
     #f.close()
