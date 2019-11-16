@@ -1,9 +1,14 @@
 from fixture.load_dll import DllHelper
 from model.input_data import *
+from fixture.search import SearchHelper
 import pytest
 # import time
 # import os
 
+@pytest.fixture
+def app():
+    fixture = SearchHelper()
+    return fixture
 
 @pytest.fixture(scope="session", autouse=True)
 def fix(request):

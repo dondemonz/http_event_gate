@@ -6,10 +6,6 @@ from fixture.search import SearchHelper
 # from model.check_event_gate_response import check_event_gate_response
 
 # Тест использует файл paths.txt в папке *SecurOS\Modules\http_event_proxy
-@pytest.fixture
-def app():
-    fixture = SearchHelper()
-    return fixture
 
 
 def test_send_request_get(app):
@@ -27,7 +23,7 @@ def test_send_request_post_with_xml(app):  # здесь проверяется �
     assert data == element
 
 
-def test_send_user_request_get_and_response(app):  # в тесте проводиться проверка на корректный запрос и не корректный параметр, респонс приходит, но там пусто (так и задумано).
+def test_send_user_request_get_and_response():  # в тесте проводиться проверка на корректный запрос и не корректный параметр, респонс приходит, но там пусто (так и задумано).
     response = requests.get(url="http://" + slave_ip + ":" + http_evgate_port + "/testreq?param=pam")
     time.sleep(1)
     assert str(response.status_code) == "200"
