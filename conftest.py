@@ -5,10 +5,12 @@ import pytest
 # import time
 # import os
 
-@pytest.fixture
+
+@pytest.fixture(scope="session")
 def app():
     fixture = SearchHelper()
     return fixture
+
 
 @pytest.fixture(scope="session", autouse=True)
 def fix(request):
