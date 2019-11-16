@@ -1,5 +1,6 @@
 iidkId = "1"
 iidkPort = "1030"  # "1030"
+http_evgate_port = "88"
 localHostIp = "172.16.11.102"  # используется для iidk
 slave = "VQA-2"
 slave_ip = "172.16.11.102"  # используется в тестах
