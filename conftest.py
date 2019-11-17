@@ -7,7 +7,7 @@ import pytest
 
 
 @pytest.fixture(scope="session")
-def app():
+def search():
     fixture = SearchHelper()
     return fixture
 
