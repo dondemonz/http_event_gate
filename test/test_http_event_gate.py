@@ -24,6 +24,7 @@ def test_send_request_post_with_xml(search):  # здесь проверяетс�
 
 
 def test_send_user_request_get_and_response():  # в тесте проводиться проверка на корректный запрос и не корректный параметр, респонс приходит, но там пусто (так и задумано).
+    time.sleep(3)
     response = requests.get(url="http://" + slave_ip + ":" + http_evgate_port + "/testreq?param=pam")
     time.sleep(3)
     assert str(response.status_code) == "200"
