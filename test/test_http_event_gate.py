@@ -1,9 +1,6 @@
 import requests
-import pytest
 from model.input_data import *
 import time
-from fixture.search import SearchHelper
-# from model.check_event_gate_response import check_event_gate_response
 
 # Тест использует файл paths.txt в папке *SecurOS\Modules\http_event_proxy
 

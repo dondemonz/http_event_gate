@@ -2,7 +2,7 @@ from fixture.load_dll import DllHelper
 from model.input_data import *
 from fixture.search import SearchHelper
 import pytest
-# import time
+import time
 # import os
 
 
@@ -17,11 +17,13 @@ def fix(request):
     fix = DllHelper()
     fix.send_event(message=("CORE||CREATE_OBJECT|objtype<HTTP_EVENT_PROXY>,objid<"+objId+">,parent_id<"+slave+">,name<Test_HTTP_Event_Gate>,port<"+http_evgate_port+">").encode("utf-8"))
     fix.send_event(message=("CORE||CREATE_OBJECT|objtype<VBJSCRIPT_GROUP>,objid<"+objId+">,parent_id<"+slave+">,name<Program VB/JScript"+objId+">").encode("utf-8"))
+    time.sleep(2)
     # у дженкинса проблемы с доступом к файлу, через пайчарм тест проходит.
     # f = open("C:\\Program Files (x86)\\ISS\\SecurOS\\Modules\\http_event_proxy\\paths.txt", "w+")
     # f.write(file_paths_data)
     # f.close()
     fix.send_event(message=("CORE||CREATE_OBJECT|objtype<VBJSCRIPT>,objid<"+objId+">,parent_id<"+objId+">,name<Program VB/JScript"+objId+">,code<"+script_data+">").encode("utf-8"))
+    time.sleep(2)
     print('\nStart fixture')
 
     def fin():
